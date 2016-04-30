@@ -1,0 +1,24 @@
+html
+    head
+        title Super Cool Scrum Tool
+        block css
+            link(rel='stylesheet' href='/plugins/bootstrap/css/bootstrap.min.css')
+            link(rel='stylesheet' href='/styles/style.css')
+            //link(rel='stylesheet' href='/plugins/bootstrap/css/bootstrap-theme.min.css')
+    body
+        nav.navbar.navbar-default
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand(href='#') Super Cool Scrum Tool
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#') Current Board
+                    li
+                        a(href='#') The Backlog 
+                    li
+                        a(href='#') Setup      
+        .container
+            block content
+        block scripts
