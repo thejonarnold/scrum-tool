@@ -1,3 +1,5 @@
-# scrum
+# scrum-tool
 
-a [Sails](http://sailsjs.org) application
+A SCRUM tool built using sailsjs.
+
+

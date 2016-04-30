@@ -1,9 +1,10 @@
 extends ../layout.jade
 
 append scripts
-	script(data-main='pages/backlog', src='plugins/require/require.js')
+	script(data-main='/requireConfig.js', src='/plugins/require/require.js')
 	
 block content
+
 	table.backlog
 		thead
 			tr
@@ -11,33 +12,20 @@ block content
 				th User
 				th Description
 				th Effort
-		tbody
+		tbody(data-bind="sortable: epics")
 			tr
 				td
-					h1 #354
+					h1(data-bind="text: id")
 				td.user
 					img(src='/images/icon.png' width='32px')
 					br
 					|JA
-				td.
-					slkdjf l;kjsad;lfkj ;lskdjf;l kjsdl;fkj;lkj lkjsd l;fk j;lkjsad
-					lksjdf;lkj ;askdjf;lkjasdlfkjlaksdjf ;lkjsdl; kfj;lksdjf;lkj ;lsadkj f;lkajsdf
-					laksdjf;lk asdl;fkjasdf;lkjasdflkjasdf asdflkjasdf ;lkjkjkjdfkkdkj kjkjoiuwerinsd
-				td 
-					h2 8
-			tr
 				td
-					h1 #354
-				td.user
-					img(src='/images/icon.png' width='32px')
-					br
-					|JA
-				td.
-					slkdjf l;kjsad;lfkj ;lskdjf;l kjsdl;fkj;lkj lkjsd l;fk j;lkjsad
-					lksjdf;lkj ;askdjf;lkjasdlfkjlaksdjf ;lkjsdl; kfj;lksdjf;lkj ;lsadkj f;lkajsdf
-					laksdjf;lk asdl;fkjasdf;lkjasdflkjasdf asdflkjasdf ;lkjkjkjdfkkdkj kjkjoiuwerinsd
+					b(data-bind="text: name")
+					p(data-bind="text: description")
 				td 
-					h2 8
+					h2(data-bind="text: size")
+
 				
 				
 
